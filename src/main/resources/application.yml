@@ -1,0 +1,21 @@
+server:
+  port:8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/buybb?useSSL=false&useUnicode=true&serverTimezone=GMT%2B8&characterEncoding=utf-8
+    username: root
+    password: 123456
+
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+#  mapper-locations: com/yc/buybb/mapper/com.yc.buybb.mapper.*.xml
+#  mapper-locations: com.yc.buybb.mapper.*.xml
+  type-aliases-package: com.yc.buybb.bean
+
+
+
