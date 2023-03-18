@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<!--MyBatis的DTD约束-->
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--核心标签mapper-->
+<!--namesoace名称空间，用于封装到该文件
+    insert:插入语句 带参插入，参数类型为string
+-->
 <mapper namespace="com.yc.buybb.mapper.TypeInfoMapper">
     <insert id="add" parameterType="string">
         insert into typeinfo values(0, #{_parameter}, 1)
     </insert>
 
+<!--    查询标签  id:唯一标识，resultType:指定结果对象映射类型-->
+<!--    parameterType:指定SQL语句中特定参数映射类型 -->
     <select id="finds" resultType="TypeInfo">
         select tno, tname, status from typeinfo order by tno
     </select>
